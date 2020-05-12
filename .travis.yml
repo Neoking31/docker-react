@@ -8,6 +8,8 @@ before_install:
 script:
  - docker run neoking23/docker-react npm run test -- --coverage
  
+before_deploy: "echo 'ready?'"
+
 deploy:
  provider: elasticbeanstalk
  region: "ap-south-1"
